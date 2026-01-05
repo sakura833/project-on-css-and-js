@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+        }
+
+        .myh1 {
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-bottom: 0px;
+        }
+
+        .myh3 {
+            color: green;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 3px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 5px 2px 5px 2px;
+            gap: 4px;
+        }
+
+        .box {
+            margin: 0 15px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-size: 16px;
+            color: yellow;
+
+        }
+
+        fieldset {
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: lightgoldenrodyellow;
+            width: 300px;
+
+        }
+
+        .bank-statement {
+            margin: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            width: 300px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="box"><a href="#Home">Home</a></div>
+        <div class="box"><a href="#About">About</a></div>
+        <div class="box"><a href="#Services">Services</a></div>
+        <div class="box"><a href="#Contact">Contact</a></div>
+    </div>
+    <div>
+        <h1 class="myh1"> INDIAN BANK </h1>
+        <h3 class="myh3"> HQ Mumbai, Maharashtra</h3>
+    </div>
+
+    <form action="">
+        <fieldset>
+            <legend>Bank Transaction</legend>
+            <label for="accname">A/C Holder Name:</label>
+            <input type="text" id="accname" name="accname" required><br><br>
+            <label for="accnum">A/C Number:</label>
+            <input type="text" id="accnum" name="accnum" required><br><br>
+            <label for="transamount">Transaction Amount:</label>
+            <input type="number" id="transamount" name="transamount" min="100" max="500000" required><br><br>
+
+            <input type="radio" name="transtype" value="withdrawal">
+            <label for="withdrawal">Withdrawal</label>
+
+            <input type="radio" name="transtype" value="deposit">
+            <label for="deposit">Deposit</label><br><br>
+            <input type="submit" value="Confirm Transaction">
+        </fieldset>
+
+    </form>
+
+    <div class="bank-statement">
+        <h2>Bank Statement: </h2>
+        <p>Opening Balance: <span class="open"> </span></p>
+        <p>Transaction Amount: <span class="transact"> </span></p>
+        <p>Closing Balance: <span class="close"> </span></p>
+
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
